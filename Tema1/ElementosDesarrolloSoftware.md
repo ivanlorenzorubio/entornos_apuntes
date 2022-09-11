@@ -82,6 +82,8 @@ Algunos ejemplos de sistemas operativos son: Windows, Linux, Mac. Las funciones 
 
     ![Tipos de software](img/TiposSoftware.png "Tipos de software")
 
+<div class="page"/>
+
 ## 2. Lenguajes de programación 
 
 Un **lenguaje de programación** es un conjunto de símbolos y reglas para combinarlos que se usan para expresar algoritmos. 
@@ -197,6 +199,8 @@ Ventajas de la POO:
 
 Actividad: Clasificar lenguajes de programación estructurados y orientados a objetos
 
+<div class="page"/>
+
 ## 3. Código fuente, objeto y ejecutable
 
 Los programas antes de ser ejecutados deben ser "traducidos" a un idioma que entienda la máquina. Por ello utilizamos programas externos asociados al lenguaje programación del programa y a la arquitectura del ordenador para majenar la "traducción" de los mismos.
@@ -236,6 +240,8 @@ Clasificación de los lenguajes de programación según su forma de ejecución:
     - Funcionamiento similar a lenguajes compilados pero en vez de generar un código objeto genera un “bytecode”.
     - El bytecode puede ser interpretado por cualquier arquitectura que tenga la *máquina virtual* correspondiente.
 
+<div class="page"/>
+
 ## 4. Máquinas virtuales
 
 Una máquina virtual es un software que simula un sistema de computación y puede ejecutar programas como si fuese una computadora real. Distinguimos dos tipos de máquinas virtuales:
@@ -260,6 +266,8 @@ Una máquina virtual es un software que simula un sistema de computación y pued
 
 > Hacer AG1: Compilar y ejecutar códigos virtuales.
 
+<div class="page"/>
+
 ## 5. Desarrollo de software
 
 El desarrollo de software es el proceso complejo que va desde que se concibe una idea hasta que el programa se encuentra en funcionamiento. 
@@ -270,6 +278,7 @@ Consta de una serie de pasos que conocemos como el **ciclo de vida del software*
 
 ![Ciclo de vida del Software](img/CicloVida.png)
 
+<div class="page"/>
 
 ### 5.1 Análisis :mag:
 
@@ -279,6 +288,7 @@ En esta fase se determina **qué debe hacer el software** y depende en gran part
 - **No funcionales**: determinan los parámetros o características del sistema: Tiempos de respuesta, disponibilidad, tolerancia a fallos, requisitos hardware, legislación…
 
 Todo lo que se concluye en esta fase debe quedar reflejado en un documento llamado ERS (Especificación de Requisitos del Software). Debe reflejar las especificaciones del cliente.
+
 
 ### 5.2 Diseño :art:
 
@@ -339,6 +349,8 @@ En esta fase se mantiene el contacto con el cliente para actualizar y modificar 
 
 Se pacta con el cliente un servicio de mantenimiento de la aplicación.
 
+<div class="page"/>
+
 ## 6. Modelos del ciclo de vida del software 
 Los modelos clásicos:
 - Modelo en cascada
@@ -381,6 +393,8 @@ Requiere de mucha planificación, tanto administrativa como técnica y es difíc
 
 ![Modelo incermental](img/modeloIncremental.jpg)
 
+<div class="page"/>
+
 ### 6.4 Modelo en espiral
 Las actividades de este modelo se organizan en una espiral, en la que cada bucle o iteración representa un conjunto de actividades. Las actividades no están fijadas a ninguna prioridad, sino que las siguientes se eligen en función del análisis de riesgo, comenzando por el bucle interior.
 
@@ -403,6 +417,8 @@ Ventajas
 - Mejora la calidad del producto
 
 Algunos ejemplos de metodología ágil son eXtreme Programming (XP), Scrum, Kanban, Open Up…
+
+
 
 #### Scrum
 Es una metodología ágil para la gestión de todo tipo de proyectos.
