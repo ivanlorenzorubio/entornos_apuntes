@@ -24,6 +24,8 @@
     - [6.5 Metodologías ágiles. Scrum](#65-metodologías-ágiles-scrum)
       - [Scrum](#scrum)
 
+<div class="page"/>
+
 ## 1. El software y su relación con otras partes del ordenador
 
 Según la Real Academia Española (RAE) un software es el _"conjunto de programas, instrucciones y reglas informáticas para ejecutar ciertas tareas en una computadora"_.

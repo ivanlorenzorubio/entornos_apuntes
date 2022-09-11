@@ -1,0 +1,5 @@
+{
+    "markdown-pdf.displayHeaderFooter": true,
+    "markdown-pdf.headerTemplate": "<div style=\"font-size: 9px; margin: 0 auto;\"> <span class='Date'></span> </div>",
+    "markdown-pdf.breaks": true
+}
