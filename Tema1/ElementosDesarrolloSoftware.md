@@ -1,7 +1,6 @@
 # Elementos para el desarrollo de software
 ## Indice:
-- [Elementos para el desarrollo de software](#elementos-para-el-desarrollo-de-software)
-  - [Contenidos:](#contenidos)
+
   - [1. El software y su relación con otras partes del ordenador](#1-el-software-y-su-relación-con-otras-partes-del-ordenador)
     - [1.1 Programa informático](#11-programa-informático)
   - [2. Lenguajes de programación](#2-lenguajes-de-programación)
@@ -22,7 +21,7 @@
     - [6.2 Modelo en cascada con retroalimentación](#62-modelo-en-cascada-con-retroalimentación)
     - [6.3 Modelo incremental](#63-modelo-incremental)
     - [6.4 Modelo en espiral](#64-modelo-en-espiral)
-    - [6.3 Metodologías ágiles. Scrum](#63-metodologías-ágiles-scrum)
+    - [6.5 Metodologías ágiles. Scrum](#65-metodologías-ágiles-scrum)
       - [Scrum](#scrum)
 
 ## 1. El software y su relación con otras partes del ordenador
@@ -37,10 +36,10 @@ El **software** es el conjunto de programas informáticos que actúan sobre el h
 
 Por lo tanto, los programas son un subconjunto del software.
 
-Para entender el concepto de software vamos a conocer los componentes de unn ordenador:
+Para entender el concepto de software vamos a conocer los componentes de un ordenador:
 
-1. **Unidad central de proceso (CPU)**: ejecuta las instrucciones contenidas en los programas. Todas las instrucciones se se traducen en operaciones aritméticas y lógicas más sencillas. La CPU consta a su vez de:
-    - **Unidas aritmético lógica (ALU)**: es un circuito digital que realiza operaciones aritméticas (suma, resta) y operaciones lógicas (IF, AND, OR, etc.) entre los valores de los argumentos (uno o dos).
+1. **Unidad central de proceso (CPU)**: ejecuta las instrucciones contenidas en los programas. Todas las instrucciones se traducen en operaciones aritméticas y lógicas más sencillas. La CPU consta a su vez de:
+    - **Unidad aritmético lógica (ALU)**: es un circuito digital que realiza operaciones aritméticas (suma, resta) y operaciones lógicas (IF, AND, OR, etc.) entre los valores de los argumentos (uno o dos).
     - **Unidad de control (UC)**: recoge las instrucciones almacenadas en la RAM y las ejecuta enviando señales a la ALU y a los registros.
     - **Registros**: es una memoria de alta velocidad y poca capacidad que constituye el almacenamiento interno de la CPU y permite la ejecución de las instrucciones.
 
@@ -71,8 +70,7 @@ Podemos clasificar los programas según su función como software de sistema, de
 
 Algunos ejemplos de sistemas operativos son: Windows, Linux, Mac. Las funciones principales del sistema operativo son:
 - Facilitar la interacción con el usuario.
-- Gestionar los recursos del equipo para 
- cuyas funciones principales son:
+- Gestionar los recursos del equipo para:
     - Facilitar al usuario el uso de los recursos o hardware del ordenador evitando que este tenga que poseer unos conocimientos profundos sobre cada uno de los dispositivos que forma el ordenador.
     - Gestionar adecuadamente los recursos del ordenador para que estos realicen bien el trabajo que se les ha encomendado.
 
@@ -295,11 +293,11 @@ Las especificaciones del diseño se recogen en el Documento de Diseño del Softw
 ### 5.3 Codificación :computer:
 En esta fase se realiza la programación, es decir, se codifican los programas.
 
-El programador o equipo de proogrmación debe cumplir todo lo establecido en las fases de análisis y diseño de la aplicación. Existen unas reglas de estilo que el programador debe conocer y cumplir.
+El programador o equipo de programación debe cumplir todo lo establecido en las fases de análisis y diseño de la aplicación. Existen unas reglas de estilo que el programador debe conocer y cumplir.
 
 Durante esta fase, el código pasa por los 3 estados visto antes:
 - Código fuente
-- Código objeto*
+- Código objeto
 - Código ejecutable
 
 **Recuerda que en los lenguajes interpretados no se produce código objeto. El paso de fuente a ejecutable es directo*
@@ -311,7 +309,7 @@ En esta fase se prueba el funcionamiento de los programas para detectar errores 
 
 Se comienza probando cada parte por separado (pruebas unitarias) y se continúa integrando diferentes componentes (pruebas de integración). Finalmente se prueba el funcionamiento global del sistema (pruebas de validación).
 
-Tras las pruebas se identificarán errores que deberán codoficarse de nuevo. Esta corrección de errores puede suponer realizar cambios en el diseño.
+Tras las pruebas se identificarán errores que deberán codificarse de nuevo. Esta corrección de errores puede suponer realizar cambios en el diseño.
 
 ### 5.5 Documentación :page_facing_up:
 Esta es una fase transversal porque tiene influencia en todas las etapas. Se debe documentar adecuadamente cada una de ellas.
@@ -343,9 +341,11 @@ Se pacta con el cliente un servicio de mantenimiento de la aplicación.
 Los modelos clásicos:
 - Modelo en cascada
 - Modelo en cascada con retroalimentación
+
 Los modelos evolutivos:
 - Modelo incremental
 - Modelo en espiral
+
 Metodologías ágiles
 - Scrum
 
@@ -388,7 +388,7 @@ Es un buen modelo para el desarrollo de grandes sistemas.
 
 ![Modelo en espiral](img/modeloEspiral.png)
 
-### 6.3 Metodologías ágiles. Scrum
+### 6.5 Metodologías ágiles. Scrum
 El término de metodología ágil nace en el año 2001 como alternativa a los procesos de desarrollo de software tradicionales.
 
 Se basan en el desarrollo iterativo e incremental y buscan satisfacer al cliente mediante entrega de productos tempranas, funcionales y continuas.
