@@ -21,7 +21,7 @@
     - [6.2 Modelo en cascada con retroalimentación](#62-modelo-en-cascada-con-retroalimentación)
     - [6.3 Modelo incremental](#63-modelo-incremental)
     - [6.4 Modelo en espiral](#64-modelo-en-espiral)
-    - [6.5 Metodologías ágiles. Scrum](#65-metodologías-ágiles-scrum)
+    - [6.5 Metodologías ágiles](#65-metodologías-ágiles-scrum)
       - [Scrum](#scrum)
 
 <div class="page"/>
@@ -404,8 +404,10 @@ Es un buen modelo para el desarrollo de grandes sistemas.
 
 ![Modelo en espiral](img/modeloEspiral.png)
 
-### 6.5 Metodologías ágiles. Scrum
+### 6.5 Metodologías ágiles.
+
 El término de metodología ágil nace en el año 2001 como alternativa a los procesos de desarrollo de software tradicionales.
+
 
 Se basan en el desarrollo iterativo e incremental y buscan satisfacer al cliente mediante entrega de productos tempranas, funcionales y continuas.
 
@@ -418,7 +420,10 @@ Ventajas
 
 Algunos ejemplos de metodología ágil son eXtreme Programming (XP), Scrum, Kanban, Open Up…
 
+Esquema general de una metodología ágil para el desarrollo del software
+![esquema general](img/Esquema_general_de_una_metodologia_agil.png)
 
+Todas ellas se basan en [los principios del manifiesto agil](https://agilemanifesto.org/iso/es/manifesto.html). 
 
 #### Scrum
 Es una metodología ágil para la gestión de todo tipo de proyectos.
