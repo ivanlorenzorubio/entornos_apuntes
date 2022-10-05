@@ -8,6 +8,6 @@ Apuntes de Entornos de Desarrollo del CFGS de Desarrollo de Aplicaciones Web.
 
 [Apuntes de la Unidad 1.](Tema1/ElementosDesarrolloSoftware.md)
   
-**2. UNIDAD 2.Instalación y uso de entornos de desarrollo.**
+**2. UNIDAD 2.Instalación y Uso de Entornos de Desarrollo.**
 
 [Apuntes de la Unidad 2.](Tema2/UT2_InstalacionUsoIDE.md)
