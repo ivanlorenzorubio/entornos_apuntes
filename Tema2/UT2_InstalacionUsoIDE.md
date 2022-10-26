@@ -69,4 +69,5 @@ Normalmente se conoce como plugin a un conjunto de módulos.
 > ¿Crees que la posibilidad de poder añadir módulos y plugins a un IDE contribuye a su éxito?
 
 > Actividad 4: instalación de módulos en NetBeans 
+
 > Actividad 5: instalación de módulos en  y Eclipse
