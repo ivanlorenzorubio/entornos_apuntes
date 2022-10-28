@@ -70,4 +70,4 @@ Normalmente se conoce como plugin a un conjunto de módulos.
 
 > Actividad 4: instalación de módulos en NetBeans 
 
-> Actividad 5: instalación de módulos en  y Eclipse
+> Actividad 5: instalación de módulos en Eclipse
