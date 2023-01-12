@@ -21,7 +21,7 @@ El objetivo de las pruebas de software es la validación y verificación del mis
 
 > **Ejemplo de la importancia de realizar pruebas de código**
 > 
-> ARIANE 5 es un cohetede un solo uso diseñado para colocar satélites en órbita geoestacionaria y para enviar cargas a órbitas bajas. El vuelo 501 (04/06/1996) fue la primera prueba de vuelo del sistema de lanzamiento del Ariane 5. Fracasó porque 37 segundos después del lanzamiento, la lanzadera explotó debido al mal funcionamiento del software de control. El motivo de la explosión fue un fallo de software, el módulo de control no se había probado lo suficiente.
+> ARIANE 5 es un cohete de un solo uso diseñado para colocar satélites en órbita geoestacionaria y para enviar cargas a órbitas bajas. El vuelo 501 (04/06/1996) fue la primera prueba de vuelo del sistema de lanzamiento del Ariane 5. Fracasó porque 37 segundos después del lanzamiento, la lanzadera explotó debido al mal funcionamiento del software de control. El motivo de la explosión fue un fallo de software, el módulo de control no se había probado lo suficiente.
 >
 > Vídeo: [TBT Launch: Ariane 5 Flight 501 (6-4-1996)](https://www.youtube.com/watch?v=fCnO-UYF3co).
 
