@@ -85,6 +85,54 @@ Se deben documentar el diseño y el resultado de las pruebas, para ello se crean
 
 ## 5. Depuración
 
+Dentro del ciclo de vida del software estamos en la fase de pruebas, justo después de codificación o implementación
+
+![ciclo de vida del software](img/ciclosoftware.png)
+
+En esta fase, una ejecución del software o de parte de él nos permite identificar y corregir errores de programación.
+
+Así pues, __la depuración__ consiste en buscar y corregir errores que puede tener el código. 
+
+Tenemos herramientas software que nos asisten en esta tarea. Se les suele llamar __depuradores__ y están, habitualmente, integrados en el IDE.
+
+El depurador simula una ejecución real del software. En realidad se está ejecutando sobre una especie de máquina virtual que controla el estado de la memoria y del procesador virtual.
+
+Estas herramientas nos van a permitir, entre otras cosas, parar la ejecución del software, ejecutarlo paso a paso, ver los valores de variables, objetos, etc.
+
+Los pasos para realizar una depuración de código son:
+
+* Ejecutaremos el código con todas las opciones posibles
+
+* Anotaremos los problemas que surgen que pueden ser de dos tipos:
+
+  * Errores funcionales (el programa no funciona o funciona mal).
+
+  * Errores de coherencia con el diseño (el programa funciona pero no hace lo que debe hacer).
+
+* Solucionamos los problemas
+
+Para solucionar los problemas se recomienda seguir también una serie de pautas:
+
+* Ejecutar el código en __modo debugging__ para poder utilizar las herramientas del IDE para depuración
+
+* __Localizar__ el problema ¿En qué línea o zona del código se produce el error?
+
+* Encontrar la __causa__ del problema ¿Porqué se produce el error?
+
+* Encontrar la __solución__ del problema. Normalmente requerirá varias pruebas
+  
+Las utilidades que tienen las herramientas del IDE para depuración son:
+
+* __Puntos de ruptura o breakpoints__: Se trata de puntos de interrupción de la ejecución del código que podemos colocar donde queramos.
+Cuando el depurador llega a ese punto se detiene. Podemos colocar tantos punto de estos como queramos. Incluso,una vez parada la ejecución podemos reanudarla para que se haga solo una instrucción. De esta forma podemos ver que efecto tiene sobre el programa cada una de las líneas de código.
+La ejecución se para en el primer breakpoint que hayamos colocado.
+Tenemos varias utilidades para trabajar a partir de un breakpoint.
+
+* __Watchpoints__: Permiten añadir una variable que no aparece en la ventana de variables para consultar su valor. Permite combinar variables con expresiones algebraicas.
+
+* __Cambiar el valor de una variable__: Se puede modificar el valor de una variable de forma manual.
+
+
 > Práctica 4: debugger
 
 ## 6. Pruebas automáticas
