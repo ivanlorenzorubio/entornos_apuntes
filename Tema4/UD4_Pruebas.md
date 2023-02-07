@@ -11,6 +11,18 @@
   - [4. Documentación de pruebas](#4-documentación-de-pruebas)
   - [5. Depuración](#5-depuración)
   - [6. Pruebas automáticas](#6-pruebas-automáticas)
+    - [Framework](#framework)
+    - [Configurar Junit5 con Maven](#configurar-junit5-con-maven)
+      - [Imports](#imports)
+    - [Ciclo de vida de Junit](#ciclo-de-vida-de-junit)
+    - [Anotaciones de Junit 5](#anotaciones-de-junit-5)
+    - [Asserts (Afirmaciones)](#asserts-afirmaciones)
+      - [Método assertArrayEquals()](#método-assertarrayequals)
+      - [Método assertEquals() y assertNotEquals()](#método-assertequals-y-assertnotequals)
+      - [Método assertTrue() y assertFalse()](#método-asserttrue-y-assertfalse)
+      - [Método assertNull() y assertNotNull()](#método-assertnull-y-assertnotnull)
+      - [Método assertSame() y assertNotSame()](#método-assertsame-y-assertnotsame)
+      - [Test de Timeout](#test-de-timeout)
 
 ## 1. Introducción a las pruebas de software
 Las pruebas de software forman parte de una de las fases del ciclo de vida del software y tratan de detectar defectos cometidos en fases anteriores.
@@ -137,4 +149,190 @@ Tenemos varias utilidades para trabajar a partir de un breakpoint.
 
 ## 6. Pruebas automáticas
 
+JUnit es un conjunto de bibliotecas que se utilizan para hacer pruebas unitarias de aplicaciones Java.
+
+JUnit es un conjunto de clases (framework) que permite realizar la ejecución de clases Java de manera controlada, para poder evaluar si el funcionamiento de cada uno de los métodos de la clase se comporta como se espera. Es decir, en función de algún valor de entrada se evalúa el valor de retorno esperado; si la clase cumple con la especificación, entonces JUnit devolverá que el método de la clase pasó exitosamente la prueba; en caso de que el valor esperado sea diferente al que regresó el método durante la ejecución, JUnit devolverá un fallo en el método correspondiente.
+
+Se puede encontrar más información sobre JUnit en [la web del proyecto](https://junit.org/junit5/).
+
+### Framework
+JUnit 5 se compone de 3 módulos principales:
+
+*	Plataforma: sirve como base para lanzar un marco de prueba en la JVM y define la API TestEngine para desarrollar un marco de prueba que se ejecuta en la plataforma.
+*	Júpiter: incluye el nuevo modelo de programación para escribir pruebas y la extensión modelo para escribir extensiones en JUnit 5.
+*	Vintage: proporciona un TestEngine que permite la compatibilidad con versiones anteriores de JUnit 4 o incluso JUnit 3.
+
+<div class="page"/>
+
+### Configurar Junit5 con Maven
+En el fichero pom.xml
+```xml
+ <dependencies>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>5.6.0</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-params</artifactId>
+            <version>5.6.0</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>5.6.0</version>
+            <scope>test</scope>
+        </dependency>
+  </dependencies>
+  <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.22.2</version>     
+            </plugin>
+        </plugins>
+    </build>
+```
+Las tres dependencias son generadas automáticamente por NetBeans con Maven pero el plugin hay que incorporarlo cuando queremos utilizar ciertas anotaciones como por ejemplo @Disabled.
+
+#### Imports
+La importación de las versiones de Junit5:
+```java
+
+import org.junit.jupiter.api.*;
+import static org.junit.jupiter.api.Assertions.*; // paquete que contiene las afirmaciones
+```
+<div class="page"/>
+
+### Ciclo de vida de Junit
+Un test Junit puede contener varios test de métodos. Cada método identificado como test será ejecutado siguiendo el ciclo de vida de Junit.
+Este consiste en tres partes: setUp, test y tearDown, y todo método se ejecuta siguiendo esta secuencia.
+Los métodos de prueba deben indicarse con la anotación __@Test__.
+
+Para crear los métodos @Test seguimos el patrón AAA (Arrange, Act, Assert).
+
+![ciclo de vida de Junit](img/cicloJunit.png)
+
+Ejemplo: Tenemos una clase calculando con el método subtract()
+```java
+@Test    
+public void testSubtract() {
+
+        //Arrange
+        double number1 = 0.0;
+        double number2 = 0.0;
+        Calculando instance = new Calculando();
+        double expResult = 0.0;
+
+        //Act
+        double result = instance.subtract(number1, number2);
+      
+        //Assert
+          assertEquals(expResult, result, 0.0);
+
+```
+### Anotaciones de Junit 5
+
+| ANOTACIÓN| USO |
+| ----- | ----- |
+| @Test| Indica que un método es un método de prueba. A diferencia de la anotación de JUnit 4 @Test, esta anotación no declara ningún atributo, ya que las extensiones de prueba en JUnit Jupiter funcionan en función de sus propias anotaciones dedicadas. Dichos métodos se heredan a menos que se anulen. |
+| @TestClassOrder| Se utiliza para configurar el orden de ejecución de la clase de prueba para @Nested clases de prueba en la clase de prueba anotada. Estas anotaciones se heredan.|
+| @TestMethodOrder| Se utiliza para configurar el orden de ejecución del método de prueba para la clase de prueba anotada.|
+| @TestInstance| Se utiliza para configurar el ciclo de vida de la instancia de prueba para la clase de prueba anotada. Estas anotaciones se heredan.|
+|@DisplayName| Declara un nombre para mostrar personalizado para la clase de prueba o el método de prueba. Estas anotaciones no se heredan.|
+|@BeforeEach| Indica que el método anotado debe ejecutarse antes de cada @Test método de la clase actual. Dichos métodos se heredan a menos que se anulen.|
+| @AfterEach| Indica que el método anotado debe ejecutarse después de cada @Test método de la clase actual. Dichos métodos se heredan a menos que se anulen.|
+| @BeforeAll| Indica que el método anotado debe ejecutarse antes que todos los @Test métodos de la clase actual. Dichos métodos se heredan (a menos que estén ocultos o anulados) y deben serlo (a menos que se use el ciclo de vida de la instancia de prueba static "por clase" ).|
+| @AfterAll| Indica que el método anotado debe ejecutarse después de todos los @Test métodos de la clase actua. Dichos métodos se heredan (a menos que estén ocultos o anulados) y deben serlo (a menos que se use el ciclo de vida de la instancia de prueba static "por clase" ).|
+| @Nested| Indica que la clase anotada es una clase de prueba anidada no estática.|
+| @Tag| Se usa para declarar etiquetas para filtrar pruebas, ya sea a nivel de clase o de método.|
+| @Disabled| Se utiliza para deshabilitar una clase de prueba o un método de prueba|
+
+### Asserts (Afirmaciones)
+JUnit proporciona métodos estáticos en la clase Assertion para probar ciertas condiciones. Estos métodos de afirmación típicamente comienzan con assert y permiten especificar el mensaje de error, el esperado y el resultado real. Un método assert compara el valor real devuelto por una prueba para el valor esperado, y se produce una __AssertionException__ si la prueba de comparación falla. 
+
+#### Método assertArrayEquals()
+El método __assertArrayEquals()__ probará si dos matrices son iguales entre sí. En otras palabras, si las dos matrices contienen el mismo número de elementos, y si todos los elementos de la matriz son iguales entre sí. 
+Para comprobar si hay elemento de la igualdad, los elementos de la matriz se comparan utilizando sus métodos equals(). Más específicamente, los elementos de cada matriz se comparan uno a uno usando su método equals(). Eso quiere decir, que no es suficiente que las dos matrices contienen los mismos elementos. También deben estar presentes en el mismo orden. Ejemplo:
+
+```java
+public class PersonaTest {
+    @Test
+    public void testCompararStringArray() {
+        String[] arrayEsperado = {"uno", "dos", "tres"};
+        String[] arrayPrueba   = {"uno", "dos", "tres"};
+        assertArrayEquals(arrayEsperado, arrayPrueba);
+    }
+}
+```
+Si las matrices son iguales, los assertArrayEquals() continuará sin errores. Si las matrices no son iguales, se produce una excepción, y la prueba es abortada. Cualquier código de prueba después de los assertArrayEquals() no se ejecutará.
+
+#### Método assertEquals() y assertNotEquals()
+El método __assertEquals()__ compara si dos objetos son iguales, utiliza el método equals(). Ejemplo:
+```java
+public class PersonaTest {
+    @Test
+    public void testComprarIgual() {
+      assertEquals("uno", "dos");
+    }
+}
+```
+Si los dos objetos son iguales de acuerdo con la aplicación de sus equal(), el método de los assertEquals() devolverá normalmente. De lo contrario, el método assertEquals() lanzará una excepción, y la prueba se detendrá ahí.
+El método __assetNotEquals()__ compara si dos objetyos son distintos, utiliza el método equals().
+
+#### Método assertTrue() y assertFalse()
+Los métodos __assertTrue()__ y __assertFalse()__ simplemente validan un resultado si es verdadero o falso.Ejemplo:
+```java
+public class PersonaTest {
+    @Test
+    public void testComprarTrue() {
+
+      boolean comprobar= calculo>10;
+      assertTrue(comprobar);
+    }  
+}
+```
+#### Método assertNull() y assertNotNull()
+Los métodos __assertNull()__ y __assertNotNull()__ simplemente validan un resultado si es nulo o no.Ejemplo:
+```java
+public class PersonaTest {
+    @Test
+    public void testComprarNull() {
+     
+        assertNull(persona);
+    } 
+}
+```
+#### Método assertSame() y assertNotSame()
+Los métodos __assertSame()__ y __assertNotSame()__ prueban si dos referencias a objetos apuntan al mismo objeto o no. No es suficiente que los dos objetos son iguales. Debe ser exactamente el mismo objeto al que apunta. Ejemplo:
+
+```java
+public class PersonaTest {
+    @Test
+    public void testComprarIgualPorReferencia() {
+        assertSame("String", "String");
+    }  
+}
+```
+#### Test de Timeout
+Podemos realizar sencillos test de rendimiento verificando que un test no exceda un tiempo límite de ejecución.
+Ejemplo: La prueba dada PASARÁ porque la ejecución del método se completa en 2 segundos, mientras que assertTimeout() espera 3 segundos.
+
+```java
+@org.junit.jupiter.api.Test    
+public void testGetSumaTiempo() throws InterruptedException {
+    Assertions.assertTimeout(Duration.ofSeconds(3), () -> {
+        getValue();
+    });
+}
+
+public String getValue() throws InterruptedException {
+	TimeUnit.SECONDS.sleep(2);
+	return "";
+}
+```
 > Práctica 5: JUnit 5 
