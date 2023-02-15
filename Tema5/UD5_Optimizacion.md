@@ -428,7 +428,6 @@ Hay muchos más "olores". Os invito a investigar en las webs:
 > Web con malos olores [Source Making](https://sourcemaking.com/refactoring/smells)
 > Web con más olores [Refactoring Guru](https://refactoring.guru/es/refactoring/smells)
 
-
 ## 2. Analizadores de código
 
 NetBeans incluye [herramientas de refactorización](https://netbeans.apache.org/kb/docs/java/editor-inspect-transform.html). 
