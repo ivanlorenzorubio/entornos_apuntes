@@ -210,6 +210,7 @@ int discount(int inputVal, int quantity) {
 }
 ```
 - __Mover método__:Un método está declarado en una clase, pero se usa más en otra.La solución es declarar el método en la clase qué más se use y en la clase en la que estaba inicialmente declarado, se puede hacer distintas cosas: declarar otro similar, dejar el código sin método si solo se usa una vez o borrarlo completamente si no se usa. 
+  
 ```Java
 //sin refactorizar
 public class BankAccount
@@ -252,6 +253,7 @@ public class AccountInterest
 }
 ```
 - __Descomponer un condicional__:Tenemos condicionales demasiado complejos con varias condiciones en una unidos por operadores lógicos. Solución, separar los condicionales o hacer un método que haga la comprobación y se vea más claro.
+
 ```Java
 //sin refactorizar
 if (date.before(SUMMER_START) || date.after(SUMMER_END)) {
