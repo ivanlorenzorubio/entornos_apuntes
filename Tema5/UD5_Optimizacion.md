@@ -210,7 +210,7 @@ int discount(int inputVal, int quantity) {
 }
 ```
 - __Mover método__:Un método está declarado en una clase, pero se usa más en otra.La solución es declarar el método en la clase qué más se use y en la clase en la que estaba inicialmente declarado, se puede hacer distintas cosas: declarar otro similar, dejar el código sin método si solo se usa una vez o borrarlo completamente si no se usa. 
-  
+
 ```Java
 //sin refactorizar
 public class BankAccount
