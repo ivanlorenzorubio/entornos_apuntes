@@ -271,6 +271,8 @@ else {
 }
 ```
 - __Consolidar expresiones condicionales__:Varios condicionales nos llevan al mismo resultado. Solución: Combinarlos en una sola expresión.
+
+
 ```Java
 //sin refactorizar
 double disabilityAmount() {
