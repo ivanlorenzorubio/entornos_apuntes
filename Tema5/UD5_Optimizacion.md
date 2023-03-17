@@ -24,7 +24,10 @@ A lo largo del ciclo de vida de una aplicación es muy frecuente tener que reali
 - Mantenimiento correctivo: busca corregir fallos detectados por el cliente tras la entrega del software.
 - Mantenimiento adaptativo: tiene como objetivo que se pueda utilizar la aplicación en nuevos entornos de software o hardware.
 
-Refactorizar nos ayuda a tener un código fuente sencillo y bien estructurado y facilita los mantenimientos. Ejemplo
+Refactorizar nos ayuda a tener un código fuente sencillo y bien estructurado y facilita los mantenimientos.
+<div class="page"/>
+
+ Ejemplo
 ```Java
 // sin aplicar refactorizacion
 void printOwing(){
@@ -60,6 +63,8 @@ Al realizar refactorizacion se puede realizar de dos formas:
 ### Convenciones y nomenclatura
 
 Para conseguir un código límpio es necesario adaptarse a las normas del lenguaje de programación. Las convenciones de programación son un conjunto de directrices para un lenguaje de programación concreto que recomienda estilo, prácticas, y métodos de programación para cada aspecto de un programa escrito en cada lenguaje.
+
+<div class="page"/>
 
 #### Ficheros:
 
@@ -142,6 +147,9 @@ public class Pattern{
 }
 ```
 - __Extraer método__ o también denominado __Sustituir bloques de código por un método__: Este patrón nos aconseja sustituir un bloque de código, por un método. De esta forma, cada vez que queramos acceder a ese bloque de código, bastaría con invocar al método. Es decir, cuando encontramos un fragmento de código que se puede agrupar. Lo incluimos dentro de un método propio indicando con su nombre la función que realiza.
+
+<div class="page"/>
+
 ```Java
 //sin refactorizar
 void printOwing(){
@@ -177,7 +185,10 @@ int precioConIva = precioBase + (0.21 * precioBase);
 final static double IVA = 0.21;
 int precioConIva = precioBase + (IVA * precioBase);
 ```
-También, separar variables temporales:Una variable intermedia temporal la estamos usando varias veces (es decir, para calcular varios valores intermedios diferentes). No siendo una variable dentro de un bucle.La solución es crear una variable para cada valor que se calcula e intentar que el nombre de esas variables intermedias corresponda con el sentido del valor calculado.
+También, separar variables temporales: Una variable intermedia temporal la estamos usando varias veces (es decir, para calcular varios valores intermedios diferentes). No siendo una variable dentro de un bucle.La solución es crear una variable para cada valor que se calcula e intentar que el nombre de esas variables intermedias corresponda con el sentido del valor calculado.
+
+<div class="page"/>
+
 ```Java
 //sin refactorizar
 double temp = 2 * (alto + ancho);
@@ -353,6 +364,8 @@ row.setVictoria("15");
 
 - __Extract interface__: Crea un nueva interfaz de los métodos public non‐static seleccionados en una clase o interfaz. 
 
+<div class="page"/>
+
 ```Java
 //Sin refactorizar:
 class Person {
@@ -395,6 +408,8 @@ Hay muchas más tecnicas: Para más informacion:
 > Web con técnicas de refactorización [Source Making](https://sourcemaking.com/refactoring/refactorings)
 > Web con técnicas de refactorización [Refactoring Guru](https://refactoring.guru/es/refactoring/techniques)
 
+<div class="page"/>
+
 ### Malos olores (bad smells)
 
 Los malos olores en el desarrollo de software es un síntoma en el código que indica que posiblemente exista un problema más profundo. Usualmente no se tratan de un bugs o errores de programación (no son técnicamente incorrectos y no impiden que el programa funcione correctamente). 
@@ -432,6 +447,35 @@ Hay muchos más "olores". Os invito a investigar en las webs:
 > Web con malos olores [Source Making](https://sourcemaking.com/refactoring/smells)
 > Web con más olores [Refactoring Guru](https://refactoring.guru/es/refactoring/smells)
 
+Prácticas:
+
+> Prácticas 1 y 2 : Refactorizar código aplicando las técnicas manualmente
+> Práctica 3 : Refactorizar código con ayuda de NetBeans
+
 ## 2. Analizadores de código
 
-NetBeans incluye [herramientas de refactorización](https://netbeans.apache.org/kb/docs/java/editor-inspect-transform.html). 
+Los analizadores de código son herramientas que realizan un análisis estático del código fuente. Estos analizadores evalúan el código fuente sin llegar a ejecutarlo. El objetivo es una mejora del código fuente sin modificar su comportamiento, que es exactamente el mismo fin que el de la refactorización. Sin embargo, en el caso de la refactorización, es el programador o la programadora quien debe detectar los síntomas de código mejorable (bad smells) y aplicar, entonces, el patrón de refactorización que permite eliminar esos síntomas. Los analizadores de código automáticamente detectan los síntomas y aportan también de foma automática una solución que la persona encargada de la programación puede decidir si aplicar o no.
+
+Los analizadores de código realizan un ánalisis léxico y sintáctico del código fuente y si detectan que este es mejorable, lo indicarán y propondrán la manera de realizar la mejora.
+
+La función principal de los analizadores de código es encontrar porciones de código que puedan generar efectos adversos como:
+
+* Reducir el rendimiento
+* Provocar errores
+* Crear problemas de seguridad
+* Tener una excesiva complejidad
+* Complicar el flujo de datos
+  
+Los analizadores de código son herramientas automáticas que realizan un análisis estático del código fuente con el fin de detectar deficiencias en este y proponer mejoras, para lo que se basan en una serie de reglas predefinidas. Si el análisis del código es realizado de manera manual por parte de una persona, recibe más bien el nombre de comprensión de programas o revisión de código.
+
+Por un lado, existen analizadores de código gratuitos y de pago y, por otro lado, de código abierto y de código cerrado.
+
+NetBeans incluye un [Analizador de código](https://netbeans.apache.org/kb/docs/java/editor-inspect-transform.html) que es capaz de detectar errores comunes de programación como:
+
+* Variables, métodos y parámetros no utilizados.
+* Bloques vacíos de sentencias catch, try, finally, switch, etc.
+* Expresiones lógicas que se pueden simplificar.
+* Código que no se ejecuta nunca porque es inalcanzable.
+* Código dubplicado.  
+  
+> Práctica 4 : Analizar código con ayuda de NetBeans
