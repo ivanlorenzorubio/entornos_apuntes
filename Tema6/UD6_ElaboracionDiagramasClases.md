@@ -234,7 +234,7 @@ Existen muchas herramientas para crear diagramas de clases. Algunas de las más 
 > Actividad 2: creación de diagramas de clase.
 
 
-> Actividad 3: generración de código a partir de diagramas de clases.
+> Actividad 3: generación de código a partir de diagramas de clases.
 
 
 > Actividad 4: generación de diagramas de clases a partir de código.
