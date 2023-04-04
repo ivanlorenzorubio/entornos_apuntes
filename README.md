@@ -27,3 +27,7 @@ Apuntes de Entornos de Desarrollo del CFGS de Desarrollo de Aplicaciones Web.
 **5. UNIDAD 5.Optimización.**
 
 [Apuntes de la Unidad 5.](Tema5/UD5_Optimizacion.md)
+
+**6. UNIDAD 6.Diagramas de clases.**
+
+[Apuntes de la Unidad 6.](Tema6/UD6_ElaboracionDiagramasClases.md)
