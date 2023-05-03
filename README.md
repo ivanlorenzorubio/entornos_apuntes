@@ -31,3 +31,7 @@ Apuntes de Entornos de Desarrollo del CFGS de Desarrollo de Aplicaciones Web.
 **6. UNIDAD 6.Diagramas de clases.**
 
 [Apuntes de la Unidad 6.](Tema6/UD6_ElaboracionDiagramasClases.md)
+
+**7. UNIDAD /.Diagramas de comportamiento.**
+
+[Apuntes de la Unidad 7.](Tema7/UD7_DiagramasComportamiento.md)
