@@ -86,7 +86,7 @@ La representación de los elementos de un diagrama de estados es la siguiente:
 
 ![](img/DiagramaEstados.png)
 
-A contianuación se muestra un ejemplo de diagrama de estados por los que puede pasar una puerta:
+A continuación se muestra un ejemplo de diagrama de estados por los que puede pasar una puerta:
 
 ![](img/EstadosPuerta.png)
 
